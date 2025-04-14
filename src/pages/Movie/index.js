@@ -16,7 +16,7 @@ function Movie() {
         async function loadDetails(){
             const response = await api.get(`/movie/${id}`, {
                 params: {
-                    api_key: "f4dd542b92150082d73160b5a9c1bb51",
+                    api_key: process.env.REACT_APP_API_KEY,
                     language: "pt-BR"
                 }
             })
